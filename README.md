@@ -12,8 +12,8 @@ Projeto de estudo em **Django Rest Framework**, para cadastro e conversão de mo
 ### Passos
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/gabrieljdbarros/api_proj.git
-   cd api_proj
+   git clone https://github.com/gabrieljdbarros/currency_api_django_project.git
+   cd currency_api_django_project
    ```
 
 2. Instale as dependências:
