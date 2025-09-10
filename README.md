@@ -2,7 +2,7 @@
 
 Projeto de estudo em **Django Rest Framework**, para cadastro e conversão de moedas.
 
-## 🚀 Como rodar localmente
+## Como rodar localmente
 
 ### Pré-requisitos
 - Python 3.10+
@@ -12,7 +12,7 @@ Projeto de estudo em **Django Rest Framework**, para cadastro e conversão de mo
 ### Passos
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/api_proj.git
+   git clone https://github.com/gabrieljdbarros/api_proj.git
    cd api_proj
    ```
 
@@ -45,7 +45,7 @@ Projeto de estudo em **Django Rest Framework**, para cadastro e conversão de mo
    python manage.py runserver
    ```
 
-## 🔗 Endpoints principais
+## Endpoints principais
 - `GET /api/rates/` → lista todas as moedas
 - `POST /api/rates/` → adiciona nova moeda
 - `PUT /api/rates/{id}/` → atualiza moeda
