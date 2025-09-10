@@ -1,0 +1,10 @@
+{% extends "cambio/base.html" %}
+{% block content %}
+  <h2 class="mb-3">Importar em Lote</h2>
+  <form method="post" class="bg-white p-3 rounded border">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary">Importar</button>
+    <p class="mt-3 text-muted">Ex.: {"USD":5.42,"EUR":5.85,"JPY":0.035}</p>
+  </form>
+{% endblock %}

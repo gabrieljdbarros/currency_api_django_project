@@ -1,0 +1,29 @@
+{% extends "cambio/base.html" %}
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Rates <small class="text-muted fs-6">(base: {{ base }})</small></h2>
+    <div class="d-flex gap-2">
+      <a class="btn btn-primary" href="{% url 'rate_create' %}">Nova</a>
+      <a class="btn btn-outline-secondary" href="{% url 'rate_batch' %}">Importar Lote</a>
+    </div>
+  </div>
+
+  <table class="table table-striped bg-white">
+    <thead><tr><th>Code</th><th>Valor por 1 ({{ base }})</th><th class="text-end">Ações</th></tr></thead>
+    <tbody>
+      {% for r in rates %}
+        <tr>
+          <td>{{ r.code }}</td>
+          <td>{{ r.rate_per_base }}</td>
+          <td class="text-end">
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'rate_edit' r.pk %}">Editar</a>
+            <a class="btn btn-sm btn-outline-secondary" href="{% url 'rate_history' r.pk %}">Histórico</a>
+            <a class="btn btn-sm btn-outline-danger" href="{% url 'rate_delete' r.pk %}">Excluir</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="3">Nenhuma rate cadastrada.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "cambio/base.html" %}
+{% block content %}
+  <h2 class="mb-3">Excluir Rate</h2>
+  <div class="bg-white p-3 rounded border">
+    <p>Tem certeza que deseja excluir <strong>{{ rate.code }}</strong> ({{ rate.rate_per_base }} por 1 {{ base }})?</p>
+    <form method="post" class="d-inline">
+      {% csrf_token %}
+      <button class="btn btn-danger">Sim, excluir</button>
+    </form>
+    <a class="btn btn-link" href="{% url 'rate_list' %}">Cancelar</a>
+  </div>
+{% endblock %}

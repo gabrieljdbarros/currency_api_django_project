@@ -1,0 +1,12 @@
+{% extends "cambio/base.html" %}
+{% block content %}
+  <h2 class="mb-3">Converter</h2>
+  <form method="post" class="bg-white p-3 rounded border mb-3">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary">Calcular</button>
+  </form>
+  {% if result is not None %}
+    <div class="alert alert-info">Resultado: <strong>{{ result }}</strong></div>
+  {% endif %}
+{% endblock %}
